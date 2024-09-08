@@ -1,0 +1,187 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    background: url("../images/pattern-background-desktop.svg") no-repeat center top, var(--pale-blue);
+    font-family: "Red Hat Display", system-ui;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+
+.card-text {
+    padding: 45px 48px 48px 48px;
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    margin-bottom: 17px;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    margin-bottom: 6px;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--desaturated-blue);
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.info {
+    border-radius: 11px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 24px;
+    margin-bottom: 32px;
+}
+
+.info a {
+    color: var(--bright-blue);
+    font-weight: bolder;
+    font-size: 14px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        color: #766CF1;
+    }
+}
+
+.price {
+    font-size: 16px;
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+.info-img {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.image-hero {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order {
+    display: block;
+    text-decoration: none;
+}
+
+.payment {
+    color: white;
+    background-color: var(--bright-blue);
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 11px;
+    padding: 15px 0;
+    transition: background-color 0.3s;
+    margin-bottom: 32px;
+    box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 0.19);
+
+    &:hover {
+        background-color: #766CF1;
+    }
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    font-size: 15px;
+    font-weight: bolder;
+    transition: color 0.3s;
+
+    &:hover {
+        color: var(--dark-blue);
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (width <= 768px) {
+    body {
+        background: url("../images/pattern-background-mobile.svg") no-repeat center top, var(--pale-blue);
+    }
+
+    .card {
+        max-width: 327px;
+    }
+
+    .card-text {
+        padding: 32px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .info {
+        margin-bottom: 24px;
+        padding: 16px;
+    }
+
+    .info a {
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .payment {
+        margin-bottom: 24px;
+    }
+
+    .image-hero {
+        width: 100%;
+    }
+}
